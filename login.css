@@ -1,0 +1,131 @@
+/* 页面背景 */
+body {
+  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+  background-image: url('https://bauw.ip-ddns.com/wp-content/uploads/2024/05/11.jpg');
+  background-size: cover; /* 使背景图充满整个屏幕 */
+  background-position: center; /* 居中显示背景图 */
+  height: 100vh; /* 使 body 高度为视口高度 */
+  margin: 0; /* 移除默认 margin */
+  display: flex; /* 使用 flexbox 居中 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+/* 语言切换隐藏 */
+.language-switcher {
+  display: none; /* 隐藏该元素，且不占空间 */
+}
+
+/* 登陆框样式 */
+.login form {
+  background-color: rgba(255, 255, 255, 0.2); /* 设置半透明的白色背景 */
+  border: none;
+  border-radius: .25rem;
+  padding: 40px;
+  max-width: 500px; /* 限制最大宽度 */
+  width: 100%; /* 使宽度自适应 */
+  box-sizing: border-box;
+}
+
+/* 登录框 label 样式 */
+.login label {
+  color: #8898aa;
+  margin-bottom: 8px;
+  margin-left: 2px;
+  font-size: 16px;
+}
+
+/* 输入框样式 */
+.login .input,
+.login input[type=password],
+.login input[type=text] {
+  background: #fff;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.25rem + 2px);
+  padding: .625rem .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #8898aa;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: .25rem;
+  box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+  border: 0;
+  transition: box-shadow .15s ease;
+  margin-bottom: 25px;
+}
+
+/* 提交按钮样式 */
+.button-primary {
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08) !important;
+  position: relative;
+  will-change: transform;
+  letter-spacing: .025em;
+  font-size: 16px !important;
+  padding: 6px 26px !important;
+  transition: box-shadow .3s ease;
+  border: none !important;
+  background-color: #5e72e4 !important;
+}
+
+.button-primary:active {
+  box-shadow: none !important;
+}
+
+/* 提交按钮垂直居中 */
+p.submit {
+  display: block;
+  width: 100%;
+  margin-top: 30px !important;
+}
+
+.login .button-primary {
+  float: none;
+  margin: auto;
+  display: block;
+}
+
+/* 忘记密码链接和其他 */
+.login form .forgetmenot {
+  float: none;
+}
+
+.login #backtoblog a, .login #nav a {
+  color: #fff !important;
+  font-size: 15px;
+  letter-spacing: 1px !important;
+  box-shadow: none;
+}
+
+.login #backtoblog, .login #nav {
+  text-align: center;
+}
+
+.login #nav {
+  margin-top: 35px;
+  color: #fff;
+}
+
+.login #login_error, .login .message, .login .success {
+  background: #fff;
+  border-radius: .25em;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+  padding: 16px 20px;
+}
+
+.login .privacy-policy-page-link {
+  text-align: center;
+  width: 100%;
+  margin: 3em 0 2em;
+}
+
+.login .privacy-policy-page-link .privacy-policy-link {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: .6;
+  text-decoration: none;
+}
