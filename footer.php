@@ -1,4 +1,5 @@
-          <footer id="footer" class="site-footer card shadow-sm border-0">
+
+		 <footer id="footer" class="site-footer card shadow-sm border-0">
             <?php
               echo get_option('argon_footer_html');
             ?>
@@ -401,6 +402,12 @@
 <!--script async src="/https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/busuanzi.pure.mini.js"></script>-->
 <!--<script async src="/wp-content/themes/argon-theme-master/js/busuanzi.pure.mini.js"></script>-->
 <script defer src="https://cn.vercount.one/js"></script>
+
+<!-- 主题额外CSS 开始 -->
+
+<?php require(get_template_directory() . '/theme-diy/other-css.php'); ?>
+
+<!-- 主题额外CSS 结束 -->
 
 </body>
 

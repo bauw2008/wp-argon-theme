@@ -3169,3 +3169,23 @@ function argon_login_page_style() {
 if (get_option('argon_enable_login_css') == 'true'){
   add_action('login_head', 'argon_login_page_style');
 }
+
+// 动态添加登录/注销按钮，并添加 Font Awesome 图标
+function add_login_logout_button_to_menu($items, $args) {
+    // 确保是顶部菜单（'toolbar_menu'）
+    if ($args->theme_location == 'toolbar_menu') {
+
+        // 如果用户未登录，添加登录按钮
+        if (!is_user_logged_in()) {
+            $login_url = wp_login_url();  // 获取登录页面 URL
+            $items .= '<li class="nav-item"><a href="' . esc_url($login_url) . '" class="nav-link"><i class="fa fa-user-circle-o"></i> 登录</a></li>';
+        } else {
+            // 如果用户已登录，添加注销按钮
+            $logout_url = wp_logout_url(home_url());  // 获取注销链接
+            $items .= '<li class="nav-item"><a href="' . esc_url($logout_url) . '" class="nav-link"><i class="fa fa-user-circle-o"></i> 注销</a></li>';
+        }
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_login_logout_button_to_menu', 10, 2);
+
