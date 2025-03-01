@@ -43,25 +43,7 @@ button#leftbar_search_container {
     font-size: 1rem;
     margin-right: 1.0 rem;
     padding-bottom: 0.2 rem;	
- 	
-/* 头像自动缩放、高亮 / 暗 */
-#leftbar_overview_author_image {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(127, 127, 127, 0.1);
-    overflow: hidden;
-    box-shadow: 0 0 5px rgba(116, 8, 204, 0.3);
-    transition: transform 0.3s ease; /* 变化速度 */
-}
-
-#leftbar_overview_author_image:hover {
-    transform: scale(1.2); /* 缩放大小 */
-    filter: brightness(110%); /* 调节亮度 */
-}
+} 	
 
 /* 隐藏公告栏名字 */
 .leftbar-announcement-title.text-white {
@@ -69,10 +51,10 @@ button#leftbar_search_container {
 }
 
 /* 额外小工具背景透明 */
-div#block-22 {
+div#block-22, div#block-44, div#block-36, div#block-35 {
     background-color: #ffffff00 !important;
 }
-	
+
 /* 用于额外诗词布局 */
 .custom-widget {
     display: flex;
@@ -107,4 +89,44 @@ div#block-22 {
     justify-content: space-between;
 }
 
+/* 头像自动缩放、高亮/暗 */
+#leftbar_overview_author_image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(127, 127, 127, 0.1);
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(116, 8, 204, 0.3);
+    transition: transform 0.3s ease; /* 变化速度 */
+}
+
+#leftbar_overview_author_image:hover {
+    transform: scale(1.2); /* 缩放大小 */
+    filter: brightness(110%); /* 调节亮度 */
+}
+	
+/* 名称 */
+#leftbar_overview_author_name {
+  	margin-top: 15px;
+	font-size: 18px;align-content;
+	color:#00FFFF;
+}
+ 
+/* 简介 */
+#leftbar_overview_author_description {
+    font-size: 14px;
+    margin-top: -4px;
+    opacity: 0.8;
+	color:#c21f30;
+}
+ 
+/* 标题，链接等 */
+a, .btn-neutral {
+    color:#AF7AC5 ;
+	
+}
+		
 </style>
