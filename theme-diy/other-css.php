@@ -28,15 +28,6 @@ button#leftbar_search_container {
  * op4——“夜间”状态主题色透明度
  */
  
-/* 顶栏图标-图片和右侧文字的间距 */
-/*  .navbar-brand img {
-	  height: 50px;
- }   */
-
- /*.mr-lg-5, .mx-lg-5 {
-margin-right: 0.2rem !important;
-}*/
-
 /*========排版设置===========*/
 
 /*顶栏菜单放大*/
@@ -52,23 +43,7 @@ margin-right: 0.2rem !important;
     font-size: 1rem;
     margin-right: 1.0 rem;
     padding-bottom: 0.2 rem;	
- 
-/* Github卡片样式*/
-.github-info-card-header a {
-    /*Github卡片抬头颜色*/
-    color: black !important;
-    font-size: 1.5rem;
-}
-.github-info-card {
-    /*Github卡片文字（非链接）*/
-    font-size: 1rem;
-    color: black !important;
-}
-.github-info-card.github-info-card-full.card.shadow-sm {
-    /*Github卡片背景色*/
-    background-color: rgba(var(--themecolor-rgbstr), 0.1) !important;
-}
-	
+ 	
 /* 头像自动缩放、高亮 / 暗 */
 #leftbar_overview_author_image {
     width: 100px;
