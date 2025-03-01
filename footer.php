@@ -1,4 +1,3 @@
-
 		 <footer id="footer" class="site-footer card shadow-sm border-0">
             <?php
               echo get_option('argon_footer_html');
@@ -134,6 +133,45 @@
 ?>
 <?php wp_footer(); ?>
 
+<!--透明设置-->
+<script>
+
+function hexToRgb(hex,op){
+let str = hex.slice(1);
+let arr;
+if (str.length === 3) arr = str.split('').map(d => parseInt(d.repeat(2), 16));
+else arr = [parseInt(str.slice(0, 2), 16), parseInt(str.slice(2, 4), 16), parseInt(str.slice(4, 6), 16)];
+return `rgb(${arr.join(', ')}, ${op})`;
+};
+ 
+let themeColorHex = getComputedStyle(document.documentElement).getPropertyValue('--themecolor').trim();
+let op1 = 0.5
+let themeColorRgb = hexToRgb(themeColorHex,op1);
+let themecolorGradient = getComputedStyle(document.documentElement).getPropertyValue('--themecolor-gradient')
+ 
+document.documentElement.style.setProperty('--themecolor-gradient',themeColorRgb)
+let op2 = 0.6
+let colorTint92 = getComputedStyle(document.documentElement).getPropertyValue('--color-tint-92').trim();
+colorTint92 += ', '+op2;
+document.documentElement.style.setProperty('--color-tint-92',colorTint92)
+ 
+let op3 = 0.5
+let colorShade90 = getComputedStyle(document.documentElement).getPropertyValue('--color-shade-90').trim();
+colorShade90 += ', ' + op3;
+document.documentElement.style.setProperty('--color-shade-90',colorShade90)
+ 
+let op4 = 0.6
+let colorShade86 = getComputedStyle(document.documentElement).getPropertyValue('--color-shade-86').trim();
+colorShade86 += ', ' + op4;
+document.documentElement.style.setProperty('--color-shade-86',colorShade86)
+	
+// 修改 #footer 背景
+document.getElementById('footer').style.setProperty('background', 'rgba(0, 0, 0, 0)', 'important');
+
+
+</script>
+
+
 <!--全页特效开始-->
 <script src="https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/mobile-detect.js"></script>
 <script type="text/javascript">
@@ -145,8 +183,8 @@
     if(!md.phone()){
         if(!md.tablet()){
       // 雪花
-      $.getScript("https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/xiaxue.js");
-      
+      //$.getScript("https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/xiaxue.js");
+  
       // 樱花
       //$.getScript("https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/yinghua.js");
       
@@ -341,11 +379,26 @@
     .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
         left: 0 !important;
     }
+	
+	/*播放器自动隐藏*/
+	//.my-hide{
+		//display:none !important;
+	//}
+	//.zero-margin-bottom{
+		//margin-bottom:0 !important;
+	//}
 
     /* 默认隐藏歌词 */
     .ap-lrc {
         display: none !important;
     }
+	 /*设置播放器样式*/
+	.aplayer .aplayer-list ol li {
+    /*设置线条样式*/
+    border-top: 1px solid #d34040 !important;
+    /*设置歌曲名称的颜色*/
+    color: black !important;
+	}
 </style>
 
 <!-- 自定义 JavaScript 代码 -->
@@ -361,7 +414,7 @@
                     lrcButton.click();
                 }, 1);
                 // 打印"success"到控制台
-                console.log("success");
+               // console.log("success");
                 // 断开MutationObserver实例，停止监听DOM的变化
                 observer.disconnect();
             }
@@ -399,9 +452,13 @@
 </script>
 
 <!--统计js-->
-<!--script async src="/https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/busuanzi.pure.mini.js"></script>-->
+<!--<script async src="/https://cdn.jsdelivr.net/gh/bauw2008/bauw/js/busuanzi.pure.mini.js"></script>-->
 <!--<script async src="/wp-content/themes/argon-theme-master/js/busuanzi.pure.mini.js"></script>-->
 <script defer src="https://cn.vercount.one/js"></script>
+<!--<script async src="/https://cdn.jsdelivr.net/gh/soxft/busuanzi@main/dist/busuanzi.js"></script>-->
+
+<!--   一言、今日诗词   -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
 <!-- 主题额外CSS 开始 -->
 

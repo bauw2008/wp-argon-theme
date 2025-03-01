@@ -1437,13 +1437,15 @@ html.darkmode .wp-block-calendar tbody td {
 }
 /*底栏*/
 #footer {
-  width: 100%;
-  float: right;
-  margin-bottom: 25px;
-  text-align: center;
-  padding: 5px 5px;
-  line-height: 1.8;
-  transition: none;
+	background: var(--themecolor-gradient);
+	color: #fff;
+	width: 100%;
+	float: right;
+	margin-bottom: 25px;
+	text-align: center;
+	padding: 25px 20px;
+	line-height: 1.8;
+	transition: none;
 }
 #footer a {
   color: #fff;
@@ -5237,85 +5239,4 @@ html.using-safari #blog_setting_card_radius_to_default:before {
 }
 html.using-safari .friend-link-description:after {
   display: none;
-}
-
-
-/*!important 代表强制执行*/
- 
-/*播放器自动隐藏*/
-.my-hide{
-    display:none !important;
-}
-.zero-margin-bottom{
-    margin-bottom:0 !important;
-}
- 
-/*下面这段CSS是设置外观的，可以不加*/
-.aplayer .aplayer-list ol li {
-    /*设置线条样式*/
-    border-top: 1px solid #d34040 !important;
-    /*设置歌曲名称的颜色*/
-    color: black !important;
-}
-
-/*隐藏公告栏名字*/
-.leftbar-announcement-title.text-white {
-    display: none;
-}
-
-/*音乐 今日诗词 站点信息*/
-.card-content {
-    padding: 2rem 0.9rem;
-}
-
-.card-info .author-info__name {
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.card-info .author-info__description {
-    margin-top: -.3rem;
-}
-
-.card-info .card-info-social-icons {
-    margin: .3rem 0 -.3rem;
-}
-.card-info .card-info-social-icons .social-icon {
-    margin: 0 .5rem;
-    color: #4c4948;
-    font-size: 1.5rem;
-}
-
-.item-headline {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333333;
-}
-.item-headline i {
-    font-size: 1.2rem;
-    color: #007bff; /* 或者其他适合的颜色 */
-    margin-right: 8px;
-}
-i.fa.fa-music {
-    font-size: 1.2rem;
-    color: #007bff;
-    margin-right: 8px;
-}
-.item-headline span {
-    margin-left: 8px;
-}
-
-.card-webinfo .webinfo {
-    padding: .2rem 1rem;
-}
-.card-webinfo .webinfo .webinfo-item {
-    display: block;
-    padding: 4px 0 0;
-}
-.card-webinfo .webinfo .webinfo-item div:first-child {
-    display: inline-block;
-}
-.card-webinfo .webinfo .webinfo-item div:last-child {
-    display: inline-block;
-    float: right;
 }

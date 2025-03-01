@@ -1,7 +1,7 @@
 /* 页面背景 */
 body {
   background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
-  background-image: url('https://bauw.ip-ddns.com/wp-content/uploads/2024/05/11.jpg');
+  background-image: url('https://cdn.jsdelivr.net/gh/bauw2008/bauw/Pictures/login.webp');
   background-size: cover; /* 使背景图充满整个屏幕 */
   background-position: center; /* 居中显示背景图 */
   height: 100vh; /* 使 body 高度为视口高度 */
