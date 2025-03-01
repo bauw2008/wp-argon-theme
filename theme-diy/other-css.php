@@ -1,4 +1,16 @@
 <style>
+/*========颜色设置===========*/
+ 
+/*左侧菜单栏突出颜色修改*/
+/*.leftbar-menu-item > a:hover, .leftbar-menu-item.current > a{
+    background-color: #f9f9f980;
+} */
+ 
+/*左侧栏搜索框的颜色*/
+button#leftbar_search_container {
+    background-color: transparent;
+}
+
 /* 在不改变主题色的前提下，将卡片等事物的背景透明化 */
 #leftbar_announcement {
     background: var(--themecolor-gradient) !important;
@@ -25,6 +37,38 @@
 margin-right: 0.2rem !important;
 }*/
 
+/*========排版设置===========*/
+
+/*顶栏菜单放大*/
+/*这里也可以设置刚刚我们设置的btfFont字体。试试看！*/
+ 
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-family: 'echo';
+			
+}
+.navbar-brand {
+	font-family: 'echo';
+    font-size: 1rem;
+    margin-right: 1.0 rem;
+    padding-bottom: 0.2 rem;	
+ 
+/* Github卡片样式*/
+.github-info-card-header a {
+    /*Github卡片抬头颜色*/
+    color: black !important;
+    font-size: 1.5rem;
+}
+.github-info-card {
+    /*Github卡片文字（非链接）*/
+    font-size: 1rem;
+    color: black !important;
+}
+.github-info-card.github-info-card-full.card.shadow-sm {
+    /*Github卡片背景色*/
+    background-color: rgba(var(--themecolor-rgbstr), 0.1) !important;
+}
+	
 /* 头像自动缩放、高亮 / 暗 */
 #leftbar_overview_author_image {
     width: 100px;
