@@ -279,6 +279,7 @@ function format_number_in_kilos($number) {
 }
 //表情包
 require_once(get_template_directory() . '/emotions.php');
+
 //文章特色图片
 function argon_get_first_image_of_article(){
   global $post;
@@ -3188,4 +3189,3 @@ function add_login_logout_button_to_menu($items, $args) {
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_login_logout_button_to_menu', 10, 2);
-

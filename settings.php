@@ -736,7 +736,7 @@ function themeoptions_page(){
 							</select>
 							<p class="description"><?php _e('也可以针对每篇文章单独设置', 'argon');?></p>
 						</td>
-					</tr>
+					</tr>	
 					<tr><th class="subtitle"><h3><?php _e('脚注(引用)', 'argon');?></h3></th></tr>
 					<tr>
 						<th><label><?php _e('脚注列表标题', 'argon');?></label></th>
